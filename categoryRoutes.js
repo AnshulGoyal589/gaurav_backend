@@ -22,6 +22,9 @@ router.get('/projects', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch projects' });
   }
 });
+router.get('/', async (req, res) => {
+ res.send("jj");
+});
 
 // GET route to fetch a single project by ID
 router.get('/projects/:id', async (req, res) => {
