@@ -17,6 +17,7 @@ router.post('/submit-project', async (req, res) => {
 router.get('/projects', async (req, res) => {
   try {
     const projects = await Category.find({});
+    console.log("first");
     res.status(200).json(projects);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch projects' });
