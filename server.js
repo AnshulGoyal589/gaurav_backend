@@ -8,7 +8,14 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors());
+const corsOptions = {
+  origin: ['https://gaurav-2.vercel.app/','https://gaurav-1.vercel.app/'],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
+
+
 app.use(express.json());
 
 
